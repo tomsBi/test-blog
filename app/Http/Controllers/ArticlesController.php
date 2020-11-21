@@ -7,6 +7,7 @@ use Illuminate\Http\Request;
 
 class ArticlesController extends Controller
 {
+    //test
     public function index()
     {
         return view('articles.index', [
@@ -19,6 +20,7 @@ class ArticlesController extends Controller
         return view('articles.create');
     }
 
+    //test
     public function store(Request $request)
     {
         $article = (new Article)->fill($request->all());
@@ -27,14 +29,14 @@ class ArticlesController extends Controller
 
         return redirect()->route('articles.index');
     }
-
+    //test
     public function show(Article $article)
     {
         return view('articles.show', [
             'article' => $article
         ]);
     }
-
+    //test
     public function edit(Article $article)
     {
         return view('articles.edit', [
